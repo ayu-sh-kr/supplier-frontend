@@ -1,0 +1,63 @@
+<div class="container mx-auto w-full px-3 py-4 shadow-md">
+  <div class="w-full py-2  text-2xl rounded-md px-4 text-blue-400 bg-gray-200" id="userId">{{data.id}}</div>
+  <table class="w-full text-gray-500 text-left text-sm mt-4 px-4">
+    <thead class="text-gray-700 uppercase bg-gray-50 text-lg w-full">
+    <tr>
+      <th class="px-6 py-3 rounded-l-lg" scope="col">Value</th>
+      <th class="px-6 py-3 rounded-l-lg" scope="col">Details</th>
+      <th class="px-6 py-3 rounded-l-lg" scope="col">Action</th>
+    </tr>
+    </thead>
+    <tr class="bg-white border-b hover:bg-gray-50 font-bold">
+      <td class="px-6 py-3 rounded-l-lg w-1/3">Name</td>
+      <td class="px-6 py-3 rounded-l-lg w-1/3" id="username">{{data.name}}
+      </td>
+      <td class="px-6 py-3 rounded-l-lg text-blue-600 w-1/3 flex space-x-8">
+        <input type="text" id="setName" class="px-4 py-2 focus:ring-4 focus:outline-none
+                rounded-md bg-gray-100 border" [disabled]="nameInput" [(ngModel)]="name">
+      </td>
+    </tr>
+    <tr class="bg-white border-b hover:bg-gray-50 w-1/3 font-bold">
+      <td class="px-6 py-3 rounded-l-lg w-1/3">Email</td>
+      <td class="px-6 py-3 rounded-l-lg w-1/3" id="email">{{data.email}}
+      </td>
+      <td class="px-6 py-3 rounded-l-lg text-blue-600 w-1/3 flex space-x-8">
+        <input type="text" id="setEmail" class="px-4 py-2 focus:ring-4
+                focus:outline-none rounded-md bg-gray-100 border" [disabled]="emailInput" [(ngModel)]="email">
+      </td>
+    </tr>
+    <tr class="bg-white border-b hover:bg-gray-50 w-1/3 font-bold">
+      <td class="px-6 py-3 rounded-l-lg w-1/3">Account Status</td>
+      <td class="px-6 py-3 rounded-l-lg w-1/3" id="accountStatus">Text
+      </td>
+      <td class="px-6 py-3 rounded-l-lg text-blue-600 w-1/3 flex space-x-8">
+        <input type="text" id="setAccountStatus" class="px-4 py-2 focus:ring-4 focus:outline-none
+                    rounded-md bg-gray-100 border" [disabled]="accountStatusInput" [(ngModel)]="accountStatus">
+      </td>
+    </tr>
+    <tr class="bg-white border-b hover:bg-gray-50 w-full font-bold">
+      <td class="px-6 py-3 rounded-l-lg w-1/3">Created On</td>
+      <td class="px-6 py-3 rounded-l-lg w-1/3"  id="createdOn"></td>
+      <td class="px-6 py-3 rounded-l-lg text-blue-600 w-1/3" ></td>
+    </tr>
+    <tr class="bg-white border-b hover:bg-gray-50 w-full font-bold">
+      <td class="px-6 py-3 rounded-l-lg w-1/3" >Roles</td>
+      <td class="px-6 py-3 rounded-l-lg w-1/3" id="roles">
+        @for (datum of data.roles; track data.id){
+            <span>{{ datum.name + ' '}}</span>
+        }
+      </td>
+      <td class="px-6 py-3 rounded-l-lg text-blue-600 w-1/3 flex space-x-8" >
+        <input type="text" id="setRoles" class="px-4 py-2 focus:ring-4 focus:outline-none rounded-md
+                bg-gray-100 border" placeholder="Enter space separated roles" [disabled]="rolesInput" [(ngModel)]="roles">
+      </td>
+    </tr>
+  </table>
+  <div class="w-full px-3 py-4 flex justify-end">
+    <div class="flex space-x-8">
+      <button class="bg-blue-500 px-5 py-1 rounded-md text-white text-lg" (click)="loadDataToEdit(data)" id="edit">Edit</button>
+      <button class="bg-red-400 px-5 py-1 rounded-md text-white text-lg" (click)="updateDataToFront()" id="save" disabled>Save</button>
+      <button class="bg-green-400 px-3 py-1 rounded-md text-white text-lg" (click)="updateUser()" id="upload">Upload</button>
+    </div>
+  </div>
+</div>
