@@ -1,0 +1,27 @@
+<div class="container w-full mx-auto py-3 px-4 flex justify-between">
+  <div class="container px-4 py-3 w-1/3">
+    <h1 (click)="setSidebar()" class="cursor-pointer font-bold text-purple-900
+        text-3xl rounded-full w-10 h-10 ring-4 ring-gray-400 text-center"
+        id="userLogo">
+      {{logoValue[0]}}
+    </h1>
+  </div>
+  <div class="container mx-auto bg-white shadow-md px-4 py-3 sm:flex hidden border rounded-2xl justify-between sm:w-2/3 w-1/3 items-center">
+    <a routerLink="/home" class="font-bold mx-2 px-2 py-2 rounded-md hover:text-blue-400 sm:block block" >Home</a>
+    <a routerLink="products" class="font-bold mx-2 px-2 py-2 rounded-md hover:text-blue-400 sm:block block">Products</a>
+    <a routerLink="branch"  class="font-bold mx-2 px-2 py-2 rounded-md hover:text-blue-400 sm:block block">Branch</a>
+    <a routerLink="shipment"  class="font-bold mx-2 px-2 py-2 rounded-md hover:text-blue-400 sm:block block">Shipments</a>
+    <a routerLink=""  class="font-bold mx-2 px-2 py-2 rounded-md hover:text-blue-400 sm:block block">Logout</a>
+  </div>
+  <div class="container px-4 py-3 w-1/3">
+    <h1 class="w-full text-right font-bold text-xl">Data</h1>
+  </div>
+</div>
+<app-side-bar [username]="logoValue" [sidebar]="sidebar" id="sidebar"></app-side-bar>
+<router-outlet></router-outlet>
+
+
+<!--<div class="container w-full mx-auto py-3 px-4">-->
+<!--  <app-product></app-product>-->
+<!--</div>-->
+

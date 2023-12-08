@@ -1,0 +1,35 @@
+<div class="container mx-auto w-full flex justify-center items-center mt-10 rounded-md">
+  <form class="w-[350px] px-4 py-2 border rounded-md bg-white shadow-md bg-image">
+    <h1 class="block text-4xl border-b-2 font-semibold py-3">Create a branch</h1>
+    <div class="mt-4 text-md font-mono">
+      <label>Branch Name:</label>
+      <input type="text" class="w-full px-4 py-2 rounded-md focus:outline-none
+      focus:ring-blue-300 focus:ring-4 bg-gray-50 border" [(ngModel)]="branch_name" [ngModelOptions]="{standalone:true}">
+    </div>
+    <div class="mt-4 text-md font-mono">
+      <label>Supplier Id: </label>
+      <input type="text" class="w-full px-4 py-2 rounded-md focus:outline-none
+      focus:ring-blue-300 focus:ring-4 bg-gray-50 border" [(ngModel)]="supplier_id" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="mt-4 text-md font-mono ">
+      <label>Branch Email: </label>
+      <input type="email" class="w-full px-4 py-2 rounded-md focus:outline-none
+      focus:ring-blue-300 focus:ring-4 bg-gray-50 border" [(ngModel)]="branch_email" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="mt-4 text-md font-mono ">
+      <label>Branch Password:</label>
+      <input type="password" class="w-full px-4 py-2 rounded-md focus:outline-none
+      focus:ring-blue-300 focus:ring-4 bg-gray-50 border" [(ngModel)]="branch_password" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="mt-4 text-md font-mono ">
+      <label>Branch Address Code:</label>
+      <input type="text" class="w-full px-4 py-2 rounded-md focus:outline-none
+      focus:ring-blue-300 focus:ring-4 bg-gray-50 border" [(ngModel)]="branch_address" [ngModelOptions]="{standalone: true}">
+    </div>
+
+    <button class="w-full font-semibold text-white
+    bg-blue-400 px-2 py-3 my-4 rounded-md hover:bg-blue-500" (click)="$event.preventDefault(); createBranch()">
+      Add Branch
+    </button>
+  </form>
+</div>

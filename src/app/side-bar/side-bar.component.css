@@ -1,0 +1,9 @@
+.sidebar-hidden{
+  transform: translateX(-250px);
+  transition: 0.5s;
+}
+
+.sidebar-visible{
+  transform: translateX(0px);
+  transition: 0.5s ease-in-out;
+}

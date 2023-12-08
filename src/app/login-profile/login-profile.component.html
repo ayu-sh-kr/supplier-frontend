@@ -1,0 +1,81 @@
+<section class="mx-auto container p-4 rounded-md h-[80svh]
+w-full mt-10 flex justify-center gap-5 items-center relative">
+  <div class="flex justify-center gap-5 items-center bg-image"></div>
+  <div class="flex justify-center gap-5 items-center bg-image2"></div>
+    <div class="w-96 h-[450px] bg-white shadow-md rounded-md p-2 opacity-100 z-50">
+      <div class="h-1/2 w-full bg-gray-300 overflow-hidden">
+        <img [src]="getImages()" alt="user image" class="h-48 w-96 object-contain">
+      </div>
+      <div class="text-xl font-semibold text-gray-700 mt-2 opacity-100">
+        My Profile
+        <div class="flex gap-2 justify-between text-center px-4">
+          <div class="text-xl border-b-2 border-gray-500 py-1 font-light text-gray-800">{{userDetails.name}}</div>
+          <div class="text-sm border-b-2 border-gray-500 py-2 font-semibold text-gray-800">
+           {{getRoles()}}
+          </div>
+        </div>
+        <div class="px-4 mt-2">
+          <div class="text-xl border-b-2  border-gray-500 py-1 font-light text-left">{{userDetails.email}}</div>
+        </div>
+        <div class="px-4 mt-2 flex justify-between">
+          <h1 class="text-yellow-500 w-full">Send SMS Alerts</h1>
+          <div class="flex justify-start w-full items-center">
+            <input type="checkbox" class="h-6 w-6 rounded-md focus:ring-2 focus:ring-indigo-300 outline-none">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div  class="flex flex-col gap-4 h-[450px] z-50">
+      <div class="w-96 h-[240px] bg-white shadow-md rounded-md px-4 justify-center items-center">
+        <div class="px-2 py-3 text-2xl font-semibold my-4">Account Actions</div>
+        <div class="flex flex-col justify-between gap-5">
+          <button class="w-full bg-red-500 hover:bg-red-600 text-white font-semibold
+         px-2 py-1 text-center rounded-md">Deactivate Account
+          </button>
+          <button class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold
+         px-2 py-1 text-center rounded-md">
+            Enable Services
+          </button>
+        </div>
+      </div>
+      <div class="w-96 h-[240px] bg-white shadow-md rounded-md px-4 py-2">
+        <div class="px-2 text-2xl font-semibold overflow-hidden flex">Address
+          <span class="py-2 px-2">
+             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+              <path d="M16 0H4a2 2 0 0 0-2 2v1H1a1 1 0 0 0 0 2h1v2H1a1 1 0 0 0 0 2h1v2H1a1 1 0 0 0 0 2h1v2H1a1 1 0 0 0 0 2h1v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4.5a3 3 0 1 1 0 6 3 3 0 0 1 0-6ZM13.929 17H7.071a.5.5 0 0 1-.5-.5 3.935 3.935 0 1 1 7.858 0 .5.5 0 0 1-.5.5Z"/>
+            </svg>
+          </span>
+        </div>
+        <div class="text-lg">
+          <table class="w-full rounded-md px-4 text-left">
+            <tr class="hover:bg-gray-100 rounded-lg">
+              <td class="px-2 border-b-2 text-gray-700">Category</td>
+              <td class="px-2 border-b-2 text-gray-700">{{address.addressType}}</td>
+            </tr>
+            <tr class="hover:bg-gray-100 rounded-lg">
+              <td class="px-2 border-b-2 text-gray-700">City</td>
+              <td class="px-2 border-b-2 text-gray-700">{{address.city}}</td>
+            </tr>
+            <tr class="hover:bg-gray-100 rounded-lg">
+              <td class="px-2 border-b-2 text-gray-700">State</td>
+              <td class="px-2 border-b-2 text-gray-700">{{address.state}}</td>
+            </tr>
+            <tr class="hover:bg-gray-100 rounded-lg">
+              <td class="px-2 border-b-2 text-gray-700">Country</td>
+              <td class="px-2 border-b-2 text-gray-700">{{address.country}}</td>
+            </tr>
+            <tr class="hover:bg-gray-100 rounded-lg">
+              <td class="px-2 border-b-2 text-gray-700">Pin</td>
+              <td class="px-2 border-b-2 text-gray-700">{{address.pincode}}</td>
+            </tr>
+          </table>
+          <button class="w-full bg-blue-500 hover:bg-blue-400 font-semibold text-white rounded-md py-1">Edit</button>
+        </div>
+      </div>
+    </div>
+<!--  </div>-->
+</section>
+<div>
+</div>
+
+

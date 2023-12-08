@@ -1,0 +1,49 @@
+<div class="mx-auto container justify-center w-full">
+  <div class="grid grid-cols-2 container gap-y-5 w-full mt-10">
+    <div class="w-[450px] mx-auto bg-white shadow-md rounded-md"
+         *ngFor="let order of orders;">
+      <div class="w-full bg-gray-500 rounded-t-md px-4
+      py-3 font-semibold flex justify-between text-xl text-center text-teal-300">
+        <h2>Order: {{order.id}}</h2>
+        <h2>Branch: {{order.branchId}}</h2>
+        <h2>Buyer: {{order.buyerId}}</h2>
+      </div>
+      <div class="px-4 flex py-3 mt-2 justify-between text-sky-500 text-lg">
+        <h3>{{order.branchName}}</h3>
+        <h3>{{order.buyerName}}</h3>
+        <h3>Status: {{order.orderStatus}}</h3>
+      </div>
+      <div class="px-4 text-xs">
+        Progress
+        <div class="flex w-full h-6 text-blue-600 rounded-lg py-2">
+          <mat-progress-bar mode="determinate" [value]="getStatus(order)"
+                            class="text-red-500 custom-progress mt-1"
+          ></mat-progress-bar>
+        </div>
+      </div>
+      <div class="w-full flex justify-between items-center">
+        <div class="px-4 my-2 w-1/2" id="{{order.id}}">
+          <mat-form-field color="primary" class="w-full">
+              <div>
+                <mat-label>Select</mat-label>
+                <mat-select [(ngModel)]="order.orderStatus">
+                  <mat-option value="ACCEPTED">Accepted</mat-option>
+                  <mat-option value="PLACED">Placed</mat-option>
+                  <mat-option value="SHIPPED">Shipped</mat-option>
+                  <mat-option value="NEARBY">Nearby</mat-option>
+                  <mat-option value="DELIVERED">Delivered</mat-option>
+                </mat-select>
+              </div>
+          </mat-form-field>
+        </div>
+        <div class="w-1/2">
+              <button mat-raised-button (click)="updateStatus(order)">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--//8791001514-->
+
+
+

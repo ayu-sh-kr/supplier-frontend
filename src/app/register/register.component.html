@@ -1,0 +1,92 @@
+<section class="bg-gray-50 min-h-screen flex flex-col items-center justify-center relative">
+<!--  <div class="bg-gray-50 px-4 py-3 absolute left-0 top-1">-->
+<!--    <h1 class="text-3xl font-bold text-purple-900 font-serif">Supplier Heaven</h1>-->
+<!--  </div>-->
+<!--  <div class="rounded-2xl px-4 py-3 w-[350px] bg-white shadow-md">-->
+<!--    <div class="w-full border-b border-gray-300">-->
+<!--      <h1 class="font-bold text-3xl text-blue-600 mt-4 mb-2">Register now</h1>-->
+<!--      <p>Good to have you with us</p>-->
+<!--    </div>-->
+<!--      <form >-->
+<!--        <input type="text" placeholder="Full Name"-->
+<!--               class="p-2 rounded-md mt-8 ring-blue-300 focus:ring-4 focus:outline-none w-full bg-gray-100 border" id="name"-->
+<!--               [(ngModel)]="name" [ngModelOptions]="{standalone: true}">-->
+<!--        <input type="email" placeholder="Email"-->
+<!--               class="p-2 rounded-md mt-8 ring-blue-300 focus:ring-4 focus:outline-none w-full bg-gray-100 border" id="email"-->
+<!--               [(ngModel)]="email" [ngModelOptions]="{standalone: true}">-->
+<!--        <input type="password" placeholder="Password"-->
+<!--               class="p-2 rounded-md mt-8 ring-blue-300 focus:ring-4 focus:outline-none w-full bg-gray-100 border" id="password"-->
+<!--               [(ngModel)]="password" [ngModelOptions]="{standalone: true}">-->
+<!--        <input type="password" placeholder="Confirm Password"-->
+<!--               class="p-2 rounded-md mt-8 ring-blue-300 focus:ring-4 focus:outline-none w-full bg-gray-100 border" id="cPass"-->
+<!--               [(ngModel)]="confirmPass" [ngModelOptions]="{standalone: true}">-->
+<!--        <button class="w-full text-center p-2 bg-blue-500 rounded-md mt-8 font-bold text-lg text-white hover:bg-blue-400"-->
+<!--                type="button" (click)="$event.preventDefault(); doRegisteration()">-->
+<!--          Register</button>-->
+<!--      </form>-->
+<!--    <div class="border-t border-black mt-4 w-full">-->
+<!--      <div class="flex justify-between mt-4">-->
+<!--        <h1 class="py-1">Already have an account?</h1>-->
+<!--        <a routerLink="" class="text-blue-600 font-semibold hover:scale-105 ease-in-out px-3 py-1 border rounded-md shadow-md">Login</a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+  <div>
+    <mat-expansion-panel class="w-[350px] pr-4">
+      <mat-expansion-panel-header class="text-2xl">User Registration</mat-expansion-panel-header>
+      <form class="w-[350px] pr-2">
+        <div class="w-full px-2">
+          <mat-form-field class="w-full">
+            <mat-label><mat-icon fontIcon="person"></mat-icon></mat-label>
+            <input type="text" matInput [(ngModel)]="name" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+        </div>
+        <div class="w-full px-2">
+          <mat-form-field class="w-full">
+            <mat-label><mat-icon fontIcon="email"></mat-icon></mat-label>
+            <input type="email" matInput [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+        </div>
+        <div class="w-full px-2">
+          <mat-form-field class="w-full">
+            <mat-label><mat-icon fontIcon="password"></mat-icon></mat-label>
+            <input type="password" matInput [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+        </div>
+        <div class="w-full px-2">
+          <mat-form-field class="w-full">
+            <mat-label><mat-icon fontIcon="password"></mat-icon></mat-label>
+            <input type="password" matInput [(ngModel)]="confirmPass" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+        </div>
+        <div class="w-full px-2">
+          <mat-form-field class="w-full">
+            <mat-label>Gender</mat-label>
+            <mat-select>
+              <mat-option value="MALE">
+                Male
+              </mat-option>
+              <mat-option value="FEMALE">
+                Female
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="w-full px-2">
+          <button mat-raised-button class="w-full text-center"
+                  (click)="$event.preventDefault(); doRegisteration()">
+            Register
+          </button>
+        </div>
+      </form>
+    </mat-expansion-panel>
+  </div>
+  <div class="mt-2">
+    <mat-expansion-panel class="w-[350px]  pr-4">
+      <mat-expansion-panel-header>
+        Already have an account
+      </mat-expansion-panel-header>
+      <a routerLink="" mat-raised-button>Sign in</a>
+    </mat-expansion-panel>
+  </div>
+</section>

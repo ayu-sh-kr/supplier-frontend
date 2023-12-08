@@ -1,0 +1,14 @@
+<div class="container mx-auto w-full bg-white shadow-md  mt-10">
+  <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+    <tr class="bg-gray-100">
+      <td class="px-6 py-3 font-bold text-gray-800 text-xl">Branch Name</td>
+      <td class="px-6 py-3 font-bold text-gray-800 text-xl">Address Code</td>
+      <td class="px-6 py-3 font-bold text-gray-800 text-xl">Email</td>
+    </tr>
+    <tr *ngFor="let branch of branchItems" class="hover:bg-gray-100 border-b border-b-2">
+      <td class="px-6 py-3 font-semibold text-gray-600 text-sm hover:text-blue-400"><a routerLink="#" class="block">{{branch.name}}</a></td>
+      <td class="px-6 py-3 font-semibold text-gray-600 text-sm">{{branch.address}}</td>
+      <td class="px-6 py-3 font-semibold text-gray-600 text-sm">{{branch.email}}</td>
+    </tr>
+  </table>
+</div>
